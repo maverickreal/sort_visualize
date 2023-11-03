@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Visualize</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div id="heading_container">
+        <h1>Sort Visualize</h1>
+    </div>
+    <hr>
+    <form>
+        <select class="clickable" name="algorithm">
+            <option selected disabled>Choose Algorithm</option>
+            <option value="bubble">bubble</option>
+            <option value="insertion">insertion</option>
+            <option value="quick">quick</option>
+            <option value="selection">selection</option>
+            <option value="merge">merge</option>
+        </select>
+        <button type="button" id="refresh" class="clickable">refresh array</button>
+        <button type="button" id="sort" class="clickable">Go!</button>
+    </form>
+    <div id="chart"></div>
+    <script type="module" src="../javascript/index.js"></script>
+</body>
+
+</html>
