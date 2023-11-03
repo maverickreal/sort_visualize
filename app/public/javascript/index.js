@@ -1,4 +1,4 @@
-import { mergeSort } from "./utility/sort/merge.js";
+import { sort } from "./utility/sort/index.js";
 
 const refreshChart = () => {
     const chart = document.getElementById('chart');
@@ -18,5 +18,5 @@ const refreshChart = () => {
 document.addEventListener('DOMContentLoaded', refreshChart);
 document.getElementById('refresh').addEventListener('click', refreshChart);
 document.getElementById('sort').addEventListener('click', () => {
-    mergeSort(document.getElementsByClassName('bar'));
+    sort(document.getElementsByClassName('bar'), 'bubble');
 });
