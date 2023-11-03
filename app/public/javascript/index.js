@@ -1,5 +1,8 @@
 import { sort } from "./utility/sort/index.js";
 
+const sortButton = document.getElementById('sort');
+const refreshButton = document.getElementById('refresh');
+
 const refreshChart = () => {
     const chart = document.getElementById('chart');
     chart.innerHTML = '';
@@ -13,10 +16,19 @@ const refreshChart = () => {
         barDiv.style.border = '1px solid black';
         chart.appendChild(barDiv);
     }
+    sortButton.disabled = false;
 }
-
 document.addEventListener('DOMContentLoaded', refreshChart);
-document.getElementById('refresh').addEventListener('click', refreshChart);
-document.getElementById('sort').addEventListener('click', () => {
-    sort(document.getElementsByClassName('bar'), 'insertion');
+refreshButton.addEventListener('click', refreshChart);
+
+sortButton.addEventListener('mouseup', () => {
+    const selectedAlgo = document.getElementsByTagName('select')[0].value;
+    if (selectedAlgo == 0) {
+        return alert('Select a sorting algorithm first!');
+    }
+    sort(document.getElementsByClassName('bar'), selectedAlgo);
+    Array.from(document.getElementsByClassName('clickable')).forEach(clickable => {
+        // clickable.style.border = clickable.style.boxShadow = 'none';
+        clickable.disabled = true;
+    });
 });

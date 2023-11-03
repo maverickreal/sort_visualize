@@ -13,18 +13,18 @@
         <h1>Sort Visualize</h1>
     </div>
     <hr>
-    <form>
-        <select class="clickable" name="algorithm">
-            <option selected disabled>Choose Algorithm</option>
-            <option value="bubble">bubble</option>
-            <option value="insertion">insertion</option>
-            <option value="quick">quick</option>
-            <option value="selection">selection</option>
-            <option value="merge">merge</option>
-        </select>
-        <button type="button" id="refresh" class="clickable">refresh array</button>
-        <button type="button" id="sort" class="clickable">Go!</button>
-    </form>
+    <div id="flex_form">
+        <div><select id="select_list" required class="clickable" name="algorithms">
+                <option selected disabled value=0>Choose Algorithm</option>
+                <option value="bubble">bubble</option>
+                <option value="insertion">insertion</option>
+                <option value="quick">quick</option>
+                <option value="selection">selection</option>
+                <option value="merge">merge</option>
+            </select></div>
+        <div><button id="refresh" class="clickable">refresh array</button></div>
+        <div><button id="sort" class="clickable">Go!</button></div>
+    </div>
     <div id="chart"></div>
     <script type="module" src="../javascript/index.js"></script>
 </body>
