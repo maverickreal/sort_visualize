@@ -18,5 +18,5 @@ const refreshChart = () => {
 document.addEventListener('DOMContentLoaded', refreshChart);
 document.getElementById('refresh').addEventListener('click', refreshChart);
 document.getElementById('sort').addEventListener('click', () => {
-    sort(document.getElementsByClassName('bar'), 'bubble');
+    sort(document.getElementsByClassName('bar'), 'selection');
 });

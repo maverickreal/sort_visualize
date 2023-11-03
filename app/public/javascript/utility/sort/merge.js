@@ -47,4 +47,4 @@ const sort = async (list, start, end) => {
     await merge(list, start, midInd, end);
 }
 
-export const mergeSort = async list => sort(list, 0, list.length - 1);
+export const mergeSort = list => sort(list, 0, list.length - 1);

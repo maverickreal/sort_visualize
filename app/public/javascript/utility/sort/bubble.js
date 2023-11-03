@@ -1,6 +1,6 @@
 const getHeight = element => parseFloat(window.getComputedStyle(element).getPropertyValue('height'));
 
-export const bubbleSort = async list => {
+const sort = async list => {
     let flag = false;
     for (let i = 0; i < list.length; ++i) {
         flag = false;
@@ -37,3 +37,5 @@ export const bubbleSort = async list => {
         element.style.backgroundColor = 'gold';
     }
 }
+
+export const bubbleSort = list => sort(list);
