@@ -14,16 +14,28 @@
     </div>
     <hr>
     <div id="flex_form">
-        <div><select id="select_list" required class="clickable" name="algorithms">
-                <option selected disabled value=0>Choose Algorithm</option>
+        <div><label for="select_list"><b><big>Choose Algorithm</big></b></label>
+            <select id="select_list" required class="clickable" name="algorithms">
+                <option selected disabled value=0></option>
                 <option value="bubble">bubble</option>
                 <option value="insertion">insertion</option>
                 <option value="quick">quick</option>
                 <option value="selection">selection</option>
                 <option value="merge">merge</option>
-            </select></div>
-        <div><button id="refresh" class="clickable">refresh array</button></div>
-        <div><button id="sort" class="clickable">Go!</button></div>
+            </select>
+        </div>
+        <div>
+            <label for="range">
+                <big><b>Choose size of array:</b></big>
+            </label>
+            <span id="range">
+                <input type="range" min="0" max="100" value="50" id="size" name="size" step="1">
+            </span>
+        </div>
+        <div><button id="refresh" class="clickable">refresh
+                array</button>
+            <button id="sort" class="clickable">Go!</button>
+        </div>
     </div>
     <div id="chart"></div>
     <script type="module" src="../javascript/index.js"></script>
